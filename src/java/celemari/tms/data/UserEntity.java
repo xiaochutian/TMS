@@ -1,9 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-package tms.data;
+package celemari.tms.data;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -12,10 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * 
- * @author Azige
- */
 @Entity
 public class UserEntity implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -70,5 +61,4 @@ public class UserEntity implements Serializable {
     public String toString(){
         return "tms.data.UserEntity[ id=" + id + " ]";
     }
-
 }

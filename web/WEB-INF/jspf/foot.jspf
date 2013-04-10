@@ -1,0 +1,6 @@
+<%@page pageEncoding="utf-8" %>
+        <div id="bottom">
+            &copy; 2013 Team Celestial Marine
+        </div>
+    </body>
+</html>

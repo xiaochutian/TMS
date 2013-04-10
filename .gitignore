@@ -11,3 +11,6 @@ dist/
 
 # Private #
 nbproject/private/
+
+# Original Resource #
+origin/
