@@ -1,13 +1,12 @@
 package celemari.tms.vo;
 
-import celemari.tms.data.UserEntity;
 import java.io.Serializable;
 
 public class UserBean implements Serializable{
 
     private boolean login = false;
+    private int id;
     private String username;
-    private UserEntity entity;
     private int role;
 
     public UserBean(){
@@ -20,7 +19,15 @@ public class UserBean implements Serializable{
     public void setLogin(boolean login){
         this.login = login;
     }
-    
+
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int id){
+        this.id = id;
+    }
+
     public String getUsername(){
         return username;
     }

@@ -4,8 +4,6 @@ import celemari.tms.vo.UserBean;
 
 /**
  * 提供用户账户的管理服务。包括注册账户，登录，管理信息等。
- *
- * @author Azige
  */
 public interface UserManager{
 
