@@ -4,12 +4,12 @@
 /***********************************************/ 
 
 body{
-	font-family: 微软雅黑;
-	color: #333333;
-	line-height: 1.166;	
-	margin: 10px auto;
-	padding: 0px;
-        width:1024px;
+    font-family: 微软雅黑;
+    color: #404040;
+    line-height: 1.166;
+    margin: 10px auto;
+    padding: 0px;
+    width:1024px;
 }
 
 a:link, a:visited, a:hover {
@@ -22,41 +22,6 @@ a:hover {
 }
 /* overrides decoration from previous rule for hovered links */
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0px;
-	padding: 0px;
-}
-
-h1{
- font-size: 120%;
- color: #334d55;
-}
-
-h2{
- font-size: 114%;
- color: #006699;
-}
-
-h3{
- font-size: 100%;
- color: #334d55;
-}
-
-h4{
- font-size: 100%;
- font-weight: normal;
- color: #333333;
-}
-
-h5{
- font-size: 100%;
- color: #334d55;
-}
-
-ul{
- list-style-type: none;
-}
-
 label{
  font: bold 100% Arial,sans-serif;
  color: #334d55;
@@ -66,6 +31,10 @@ img {
     border: none;
 }
 
+form{
+    display: inline;
+}
+
 /***********************************************/
 /* Layout Divs                                 */
 /***********************************************/
@@ -73,7 +42,12 @@ img {
 #userBar{
     text-align: right;
     font-size: 12px;
-    margin: 0 10% 4px 80%;
+    margin: 0 10% 4px 10%;
+    color: #000000;
+}
+
+#userBar input{
+    width: 50px;
 }
 
 #masthead{
@@ -126,6 +100,21 @@ img {
     color: #ff0000;
 }
 
+/************** #index page **************/
+
+#mainContent{
+    width: max-content;
+    height: 100%;
+    margin: 0;
+    padding: 0 50px;
+}
+
+#mainContent h1{
+    width: 100%;
+    font-size: 200%;
+    text-align: center;
+}
+
 /*************** #user page **************/
 
 #funcBar{
@@ -149,13 +138,18 @@ img {
     background: #ffcc66;
 }
 
-/************* #breadCrumb styles *************/
+/************* .boxButton styles *************/
 
-#breadCrumb{
-	font-size: 80%;
-	padding: 5px 0px 5px 10px;
+a.boxButton:link, a.boxButton:visited{
+    padding: 4px;
+    background: #66ccff;
+    color: #ffffff;
+    text-decoration: none;
 }
 
+a.boxButton:hover{
+    background: #ffcc66;
+}
 
 /************** .feature styles ***************/
 
