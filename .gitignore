@@ -10,9 +10,13 @@ build/
 dist/
 
 # Private #
-nbproject/private/
+nbproject/
+setup/
+build.xml
+README.md
 
 # Original Resource #
+origin/
 origin/
 
 # MyEclipse config#
