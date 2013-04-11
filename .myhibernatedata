@@ -1,5 +1,5 @@
 #MyEclipse Hibernate Properties
-#Thu Apr 11 21:58:18 CST 2013
+#Thu Apr 11 23:20:49 CST 2013
 sessionFactoryName=hbn.HibernateSessionFactory
 genBasicCompId=false
 profile=
@@ -19,7 +19,7 @@ sessionFactoryId=
 basePersistenceClass=
 genAnnotations=false
 reSettingsFile=
-configFile=/TMS/src/hibernate.cfg.xml
+configFile=/TMS/src/celemari/tms/hbn/hibernate.cfg.xml
 createConfigFile=true
 addLibs2Classpath=true
 baseDaoClass=BaseHibernateDAO
