@@ -25,7 +25,7 @@ public interface UserManager{
      * @param info 用户信息
      * @return 用户对象
      */
-    UserBean register(String username, byte[] password, int role, Object... profile);
+    UserBean register(String username, String password, int role, Object... profile);
 
     /**
      * 以用户名和密码登录
@@ -35,7 +35,7 @@ public interface UserManager{
      * @param role 用户身份
      * @return 用户对象
      */
-    UserBean login(String username, byte[] password, int role);
+    UserBean login(String username, String password, int role);
 
     /**
      * 更新用户信息

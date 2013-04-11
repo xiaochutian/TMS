@@ -7,6 +7,7 @@ public class UserBean implements Serializable{
     private boolean login = false;
     private int id;
     private String username;
+    private String password;
     private int role;
 
     public UserBean(){
@@ -42,5 +43,19 @@ public class UserBean implements Serializable{
 
     public void setRole(int role){
         this.role = role;
+    }
+
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
