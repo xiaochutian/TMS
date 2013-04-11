@@ -11,6 +11,9 @@ dist/
 
 # Private #
 nbproject/
+setup/
+build.xml
+README.md
 
 # Original Resource #
 origin/
