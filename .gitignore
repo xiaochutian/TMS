@@ -14,3 +14,10 @@ nbproject/private/
 
 # Original Resource #
 origin/
+
+# MyEclipse config#
+.myeclips/
+.settings/
+.classpath
+.mymetadata
+.project

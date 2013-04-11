@@ -1,4 +1,0 @@
-TMS
-===
-
-Training Management System
