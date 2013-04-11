@@ -10,7 +10,7 @@ build/
 dist/
 
 # Private #
-nbproject/private/
+nbproject/
 
 # Original Resource #
 origin/
