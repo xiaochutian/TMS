@@ -17,7 +17,6 @@ README.md
 
 # Original Resource #
 origin/
-origin/
 
 # MyEclipse config#
 .myeclips/
@@ -25,3 +24,6 @@ origin/
 .classpath
 .mymetadata
 .project
+
+# Lib #
+WebRoot/WEB-INF/lib/

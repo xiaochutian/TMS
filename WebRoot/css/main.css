@@ -141,7 +141,9 @@ form{
 /************* .boxButton styles *************/
 
 a.boxButton:link, a.boxButton:visited{
-    padding: 4px;
+    margin: 0 2px;
+    padding: 0.5em;
+    line-height: 2.5em;
     background: #66ccff;
     color: #ffffff;
     text-decoration: none;

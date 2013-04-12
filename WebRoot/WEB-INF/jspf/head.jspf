@@ -32,7 +32,7 @@
                         用户名 <input id="usernameText"type="text" name="username">
                         密码 <input id="passwordText" type="password" name="passwrod">
                     </form>
-                    <a href="#" onclick="login();">登录</a> | <a href="<%=rootPath%>">注册</a>
+                    <a href="#" onclick="login();">登录</a> | <a href="<%=rootPath%>/register.jsp">注册</a>
                 </c:when>
                 <c:otherwise>
                     <b><a href="#">${user.username}</a></b> <a href="#">退出登录</a>

@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% pageContext.setAttribute("pageTitle", "注册");%>
+<%pageContext.setAttribute("pageTitle", "注册");%>
 <%@include file="WEB-INF/jspf/head.jspf"%>
 <div id="mainContent">
     <center>
@@ -12,8 +12,6 @@
                     <td><s:textfield name="user.password" label="密码"/></td>
                 </tr>
             </table>
-            <br>
-            <s:submit/>
             <a href="#" class="boxButton">注册</a>
         </s:form>
     </center>
