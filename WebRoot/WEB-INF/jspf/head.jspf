@@ -3,12 +3,19 @@
 <!DOCTYPE html>
 <% String rootPath = application.getContextPath(); %>
 <jsp:useBean id="user" class="celemari.tms.vo.UserBean" scope="session"/>
-<jsp:setProperty name="user" property="login" value="true"/>
-<jsp:setProperty name="user" property="username" value="asd"/>
 <html>
     <head>
         <link rel="stylesheet" href="<%=rootPath%>/css/main.css" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function login(){
+                if (usernameText.value && passwordText.value){
+                    userForm.submit();
+                }else{
+                    alert("用户名和密码不能为空！");
+                }
+            }
+        </script>
         <title>
             实训管理系统
             <c:if test="<%=pageContext.getAttribute("pageTitle") != null%>">
@@ -20,10 +27,14 @@
         <div id="userBar">
             <c:choose>
                 <c:when test="${!user.login}">
-                    <a href="#">登录</a> | <a href="#">注册</a>
+                    <form id="userForm" action="<%=rootPath%>/login" method="POST">
+                        用户名 <input id="usernameText"type="text" name="username">
+                        密码 <input id="passwordText" type="password" name="passwrod">
+                    </form>
+                    <a href="#" onclick="login();">登录</a> | <a href="<%=rootPath%>">注册</a>
                 </c:when>
                 <c:otherwise>
-                    <a href="#"><b>${user.username}</b></a> <a href="#">退出登录</a>
+                    <b><a href="#">${user.username}</a></b> <a href="#">退出登录</a>
                 </c:otherwise>
             </c:choose>
         </div>
@@ -31,9 +42,9 @@
             <img src="<%=rootPath%>/img/title.png" title="TMS">
             <div id="navBar" class="buttonBar">
                 <a href="<%=rootPath%>">主页</a>
-                <a href="<%=rootPath%>">主页</a>
-                <a href="<%=rootPath%>">主页</a>
-                <a href="<%=rootPath%>">主页</a>
-                <a href="<%=rootPath%>">主页</a>
+                <a href="#">岗位</a>
+                <a href="#">个人</a>
+                <a href="#">查询</a>
+                <a href="#">帮助</a>
             </div>
         </div>
