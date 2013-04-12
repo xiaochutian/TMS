@@ -2,13 +2,16 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
-<% String rootPath = application.getContextPath(); %>
+<% String rootPath = application.getContextPath();%>
 <html>
     <head>
         <link rel="stylesheet" href="<%=rootPath%>/css/main.css" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script>
             function login(){
+                var usernameText = document.getElementById("usernameText");
+                var passwordText = document.getElementById("passwordText");
+                var userForm = document.getElementById("userForm");
                 if (usernameText.value && passwordText.value){
                     userForm.submit();
                 }else{
@@ -18,20 +21,20 @@
         </script>
         <title>
             实训管理系统
-            <c:if test="<%=pageContext.getAttribute("pageTitle") != null%>">
-                - <%=pageContext.getAttribute("pageTitle")%>
+            <c:if test="${!empty pageScope.title}">
+                - ${title}
             </c:if>
         </title>
     </head>
     <body>
         <div id="userBar">
             <c:choose>
-                <c:when test="${!user.login}">
+                <c:when test="${empty user}">
                     <form id="userForm" action="<%=rootPath%>/login" method="POST">
                         用户名 <input id="usernameText"type="text" name="username">
                         密码 <input id="passwordText" type="password" name="passwrod">
                     </form>
-                    <a href="#" onclick="login();">登录</a> | <a href="<%=rootPath%>/register.jsp">注册</a>
+                    <a href="#" onclick="login()">登录</a> | <a href="<%=rootPath%>/register.jsp">注册</a>
                 </c:when>
                 <c:otherwise>
                     <b><a href="#">${user.username}</a></b> <a href="#">退出登录</a>
