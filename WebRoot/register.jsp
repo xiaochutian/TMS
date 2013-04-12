@@ -1,5 +1,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%pageContext.setAttribute("pageTitle", "注册");%>
+<%pageContext.setAttribute("pageTitle", "注册");
+    celemari.tms.vo.UserBean user = new celemari.tms.vo.UserBean();
+    user.setUsername("asd");
+    session.setAttribute("user", user);
+%>
 <%@include file="WEB-INF/jspf/head.jspf"%>
 <div id="mainContent">
     <center>
