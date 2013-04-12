@@ -3,20 +3,19 @@
 <%@include file="WEB-INF/jspf/head.jspf"%>
 <div id="mainContent">
     <center>
-        <form action="register">
+        <s:form action="register">
             <table>
                 <tr>
-                    <td>用户名</td>
-                    <td><input name="username" type="text"></td>
+                    <td><s:textfield name="user.username" label="用户名"/></td>
                 </tr>
                 <tr>
-                    <td>密码</td>
-                    <td><input name="password" type="password"></td>
+                    <td><s:textfield name="user.password" label="密码"/></td>
                 </tr>
             </table>
             <br>
+            <s:submit/>
             <a href="#" class="boxButton">注册</a>
-        </form>
+        </s:form>
     </center>
 </div>
 <%@include file="WEB-INF/jspf/foot.jspf"%>
