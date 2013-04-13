@@ -138,6 +138,33 @@ form{
     background: #ffcc66;
 }
 
+#userInfoContent{
+    float: right;
+    width: 800px;
+    height: 100%;
+    background: #6cf;
+}
+
+#trainBox{
+
+}
+
+/* job page */
+
+.jobBox{
+    float: left;
+    color: #404040;
+    border: 2px groove #cccccc;
+    margin: 1% 1%;
+    width: 45%;
+    height: 200px;
+}
+
+.jobBox:hover{
+    border: 2px dotted #666666;
+    background: #ffcc66;
+}
+
 /************* .boxButton styles *************/
 
 a.boxButton:link, a.boxButton:visited{

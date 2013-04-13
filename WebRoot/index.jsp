@@ -1,7 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/jspf/head.jspf" %>
 <c:if test="${!empty user}">
-    <jsp:forward page="register.jsp"/>
+    <jsp:forward page="/WEB-INF/view/user.jsp"/>
 </c:if>
 <div id="mainContent">
     <h1>为你带来新的机遇与挑战!</h1>

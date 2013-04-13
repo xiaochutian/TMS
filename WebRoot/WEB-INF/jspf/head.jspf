@@ -45,7 +45,7 @@
             <img src="<%=rootPath%>/img/title.png" title="TMS">
             <div id="navBar" class="buttonBar">
                 <a href="<%=rootPath%>">主页</a>
-                <a href="<%=rootPath%>/job">岗位</a>
+                <a href="<%=rootPath%>/job.jsp">岗位</a>
                 <a href="#">个人</a>
                 <a href="#">查询</a>
                 <a href="#">帮助</a>

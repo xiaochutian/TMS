@@ -1,6 +1,7 @@
 package celemari.tms.vo;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class UserBean implements Serializable{
 
@@ -57,5 +58,10 @@ public class UserBean implements Serializable{
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<JobBean> getJobs(){
+        //TODO: implement it
+        return null;
     }
 }
