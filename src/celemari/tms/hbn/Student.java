@@ -7,7 +7,7 @@ import java.util.Set;
  * Student entity. @author MyEclipse Persistence Tools
  */
 
-public class Student implements java.io.Serializable {
+public class Student extends celemari.tms.hbn.User implements java.io.Serializable {
 
 	// Fields
 
@@ -24,32 +24,38 @@ public class Student implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Student(Integer studentNumber,
+	public Student(Integer studentNumber,String name, String password,
 			String email, Short type) {
 		this.studentNumber = studentNumber;
 		this.email = email;
 		this.type = type;
+		this.setName(name);
+		this.setPassword(password);
 	}
 	
 	
 	/** my constructor*/
-	public Student(Integer studentNumber,
+	public Student(Integer studentNumber,String name, String password,
 			String email, String phoneNumber, Short type) {
 		super();
 		this.studentNumber = studentNumber;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.type = type;
+		this.setName(name);
+		this.setPassword(password);
 	}
 
 	/** full constructor */
-	public Student(Integer studentNumber,
+	public Student(Integer studentNumber,String name, String password,
 			String email, String phoneNumber, Short type, Set trainings) {
 		this.studentNumber = studentNumber;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.type = type;
 		this.trainings = trainings;
+		this.setName(name);
+		this.setPassword(password);
 	}
 
 	// Property accessors
