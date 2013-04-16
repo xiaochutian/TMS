@@ -30,21 +30,25 @@ public class Teacher extends celemari.tms.hbn.User implements java.io.Serializab
 	
 	
 	/** my constructor*/
-	public Teacher(Integer idteacher, 
+	public Teacher(Integer idteacher, String name,String password,
 			String email, String phoneNumber) {
 		super();
 		this.idteacher = idteacher;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
+		this.setName(name);
+		this.setPassword(password);
 	}
 
 	/** full constructor */
-	public Teacher(Integer idteacher, 
+	public Teacher(Integer idteacher, String name,String password,
 			String email, String phoneNumber, Set jobs) {
 		this.idteacher = idteacher;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.jobs = jobs;
+		this.setName(name);
+		this.setPassword(password);
 	}
 
 	// Property accessors
