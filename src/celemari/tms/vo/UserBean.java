@@ -9,19 +9,48 @@ public class UserBean implements Serializable{
     private String username;
     private String password;
     private int role;
+    private String email;
+    private String phone;
 
     public UserBean(){
     }
     
-    public boolean isLogin(){
+    public UserBean(int id, String username, String password, int role,
+			String email, String phone) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.password = password;
+		this.role = role;
+		this.email = email;
+		this.phone = phone;
+	}
+
+	public boolean isLogin(){
         return login;
     }
 
     public void setLogin(boolean login){
         this.login = login;
     }
+    
+    public String getEmail() {
+		return email;
+	}
 
-    public int getId(){
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public int getId(){
         return id;
     }
 

@@ -24,6 +24,7 @@ public class TeacherDAO extends BaseHibernateDAO {
 	private static final Logger log = LoggerFactory.getLogger(TeacherDAO.class);
 	// property constants
 	public static final String NAME = "name";
+	public static final String PASSWORD = "password";
 	public static final String EMAIL = "email";
 	public static final String PHONE_NUMBER = "phoneNumber";
 
@@ -93,6 +94,10 @@ public class TeacherDAO extends BaseHibernateDAO {
 
 	public List findByName(Object name) {
 		return findByProperty(NAME, name);
+	}
+
+	public List findByPassword(Object password) {
+		return findByProperty(PASSWORD, password);
 	}
 
 	public List findByEmail(Object email) {
