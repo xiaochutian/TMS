@@ -1,9 +1,11 @@
 package celemari.tms;
 
+import java.util.List;
+
+import celemari.tms.hbn.Job;
 import celemari.tms.vo.JobBean;
 import celemari.tms.vo.TrainBean;
 import celemari.tms.vo.UserBean;
-import java.util.List;
 
 /**
  * 管理发布实训招收信息，查看已发布的信息并申请，处理申请及审批。

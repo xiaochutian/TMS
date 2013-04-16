@@ -12,8 +12,6 @@ public class Student implements java.io.Serializable {
 	// Fields
 
 	private Integer studentNumber;
-	private String name;
-	private String password;
 	private String email;
 	private String phoneNumber;
 	private Short type;
@@ -26,34 +24,28 @@ public class Student implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Student(Integer studentNumber, String name, String password,
+	public Student(Integer studentNumber,
 			String email, Short type) {
 		this.studentNumber = studentNumber;
-		this.name = name;
-		this.password = password;
 		this.email = email;
 		this.type = type;
 	}
 	
 	
 	/** my constructor*/
-	public Student(Integer studentNumber, String name, String password,
+	public Student(Integer studentNumber,
 			String email, String phoneNumber, Short type) {
 		super();
 		this.studentNumber = studentNumber;
-		this.name = name;
-		this.password = password;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.type = type;
 	}
 
 	/** full constructor */
-	public Student(Integer studentNumber, String name, String password,
+	public Student(Integer studentNumber,
 			String email, String phoneNumber, Short type, Set trainings) {
 		this.studentNumber = studentNumber;
-		this.name = name;
-		this.password = password;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.type = type;
@@ -70,21 +62,6 @@ public class Student implements java.io.Serializable {
 		this.studentNumber = studentNumber;
 	}
 
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getPassword() {
-		return this.password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	public String getEmail() {
 		return this.email;
