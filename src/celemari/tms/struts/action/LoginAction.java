@@ -23,7 +23,8 @@ public class LoginAction {
 	public String execute() throws Exception {
             
             Map session = (Map)ActionContext.getContext().get(ActionContext.SESSION);
-            retuser = um.login(user.getUsername(), user.getPassword(),user.getRole());
+            //retuser = um.login(user.getId(), user.getPassword(),user.getRole());
+            retuser = new UserBean();
             if ( retuser != null ){
                 session.put("user", retuser);
                 return "success";
