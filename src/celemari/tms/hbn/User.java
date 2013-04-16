@@ -9,22 +9,33 @@ public class User {
 	public User() {
 		super();
 	}
-	public User(String username, String password) {
+
+
+	public User(String name, String password) {
 		super();
-		this.name = username;
+		this.name = name;
 		this.password = password;
 	}
-	public String getUsername() {
+
+
+	public String getName() {
 		return name;
 	}
-	public void setUsername(String username) {
-		this.name = username;
+
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
+
 	public String getPassword() {
 		return password;
 	}
+
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
 	
 }
