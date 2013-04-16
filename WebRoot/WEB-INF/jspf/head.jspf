@@ -2,10 +2,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
-<% String rootPath = application.getContextPath();%>
+<%pageContext.setAttribute("rootPath", application.getContextPath());%>
 <html>
     <head>
-        <link rel="stylesheet" href="<%=rootPath%>/css/main.css" type="text/css">
+        <link rel="stylesheet" href="${rootPath}/css/main.css" type="text/css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script>
             function login(){
@@ -30,11 +30,11 @@
         <div id="userBar">
             <c:choose>
                 <c:when test="${empty user}">
-                    <form id="userForm" action="<%=rootPath%>/login" method="POST">
-                        用户名 <input id="usernameText"type="text" name="username">
-                        密码 <input id="passwordText" type="password" name="passwrod">
-                    </form>
-                    <a href="#" onclick="login()">登录</a> | <a href="<%=rootPath%>/register.jsp">注册</a>
+                    <s:form id="userForm" action="Login" method="POST">
+                        <s:textfield label="用户名" id="usernameText"type="text" name="user.username"/>
+                        <s:password label="密码" id="passwordText" type="password" name="user.passwrod"/>
+                    </s:form>
+                    <a href="#" onclick="login()">登录</a> | <a href="${rootPath}/register.jsp">注册</a>
                 </c:when>
                 <c:otherwise>
                     <b><a href="#">${user.username}</a></b> <a href="#">退出登录</a>
@@ -42,11 +42,11 @@
             </c:choose>
         </div>
         <div id="masthead">
-            <img src="<%=rootPath%>/img/title.png" title="TMS">
+            <img src="${rootPath}/img/title.png" title="TMS">
             <div id="navBar" class="buttonBar">
-                <a href="<%=rootPath%>">主页</a>
-                <a href="<%=rootPath%>/job.jsp">岗位</a>
-                <a href="#">个人</a>
+                <a href="${rootPath}">主页</a>
+                <a href="${rootPath}/Job">岗位</a>
+                <a href="${rootPath}/Profile">个人</a>
                 <a href="#">查询</a>
                 <a href="#">帮助</a>
             </div>

@@ -1,9 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%pageContext.setAttribute("pageTitle", "注册");
-    celemari.tms.vo.UserBean user = new celemari.tms.vo.UserBean();
-    user.setUsername("asd");
-    session.setAttribute("user", user);
-%>
+<%pageContext.setAttribute("pageTitle", "注册");%>
 <%@include file="WEB-INF/jspf/head.jspf"%>
 <script>
     function register(){
@@ -24,7 +20,7 @@
 </script>
 <div id="mainContent">
     <center>
-        <s:form action="register" id="regForm">
+        <s:form action="Register" id="regForm">
             <table>
                 <tr>
                     <td><s:textfield name="user.username" label="用户名" id="regUsername"/></td>
