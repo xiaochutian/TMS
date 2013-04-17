@@ -8,7 +8,7 @@ public class Studentdocument implements java.io.Serializable {
 
 	// Fields
 
-	private StudentdocumentId id;
+	private Integer idstudentdocument;
 	private Training training;
 	private String name;
 	private String address;
@@ -21,15 +21,13 @@ public class Studentdocument implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Studentdocument(StudentdocumentId id, Training training) {
-		this.id = id;
+	public Studentdocument(Training training) {
 		this.training = training;
 	}
 
 	/** full constructor */
-	public Studentdocument(StudentdocumentId id, Training training,
-			String name, String address, Short type) {
-		this.id = id;
+	public Studentdocument(Training training, String name, String address,
+			Short type) {
 		this.training = training;
 		this.name = name;
 		this.address = address;
@@ -38,12 +36,12 @@ public class Studentdocument implements java.io.Serializable {
 
 	// Property accessors
 
-	public StudentdocumentId getId() {
-		return this.id;
+	public Integer getIdstudentdocument() {
+		return this.idstudentdocument;
 	}
 
-	public void setId(StudentdocumentId id) {
-		this.id = id;
+	public void setIdstudentdocument(Integer idstudentdocument) {
+		this.idstudentdocument = idstudentdocument;
 	}
 
 	public Training getTraining() {

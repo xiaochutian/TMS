@@ -11,7 +11,8 @@ public class Student implements java.io.Serializable {
 
 	// Fields
 
-	private Integer studentNumber;
+	private Integer idstudent;
+	private String studentNumber;
 	private String name;
 	private String password;
 	private String email;
@@ -26,7 +27,7 @@ public class Student implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Student(Integer studentNumber, String name, String password,
+	public Student(String studentNumber, String name, String password,
 			String email, Short type) {
 		this.studentNumber = studentNumber;
 		this.name = name;
@@ -34,9 +35,8 @@ public class Student implements java.io.Serializable {
 		this.email = email;
 		this.type = type;
 	}
-	
-	/**my constructor*/
-	public Student(Integer studentNumber, String name, String password,
+
+	public Student(String studentNumber, String name, String password,
 			String email, String phoneNumber, Short type) {
 		super();
 		this.studentNumber = studentNumber;
@@ -48,7 +48,7 @@ public class Student implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Student(Integer studentNumber, String name, String password,
+	public Student(String studentNumber, String name, String password,
 			String email, String phoneNumber, Short type, Set trainings) {
 		this.studentNumber = studentNumber;
 		this.name = name;
@@ -59,15 +59,21 @@ public class Student implements java.io.Serializable {
 		this.trainings = trainings;
 	}
 
-	
-
 	// Property accessors
 
-	public Integer getStudentNumber() {
+	public Integer getIdstudent() {
+		return this.idstudent;
+	}
+
+	public void setIdstudent(Integer idstudent) {
+		this.idstudent = idstudent;
+	}
+
+	public String getStudentNumber() {
 		return this.studentNumber;
 	}
 
-	public void setStudentNumber(Integer studentNumber) {
+	public void setStudentNumber(String studentNumber) {
 		this.studentNumber = studentNumber;
 	}
 

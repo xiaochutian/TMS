@@ -50,7 +50,7 @@ public class JobDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Job findById(celemari.tms.hbn.JobId id) {
+	public Job findById(java.lang.Integer id) {
 		log.debug("getting Job instance with id: " + id);
 		try {
 			Job instance = (Job) getSession().get("celemari.tms.hbn.Job", id);

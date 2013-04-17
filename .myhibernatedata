@@ -1,7 +1,7 @@
 #MyEclipse Hibernate Properties
-#Wed Apr 17 13:53:19 CST 2013
-sessionFactoryName=hbn.HibernateSessionFactory
-genBasicCompId=true
+#Wed Apr 17 20:00:58 CST 2013
+sessionFactoryName=celemari.tms.hbn.HibernateSessionFactory
+genBasicCompId=false
 profile=
 daoSFId=
 version=3.3
@@ -12,14 +12,14 @@ detectO2O=true
 springDaoFile=
 useJavaTypes=true
 keyGenerator=
-libInstallFolder=WebRoot/WEB-INF/lib
-addLibs2Project=true
+libInstallFolder=/WebRoot/WEB-INF/lib
+addLibs2Project=false
 genVersionTag=false
 sessionFactoryId=
 basePersistenceClass=
 genAnnotations=false
 reSettingsFile=
-configFile=/TMS/src/celemari/tms/hbn/hibernate.cfg.xml
+configFile=/TMS/src/hibernate.cfg.xml
 createConfigFile=true
-addLibs2Classpath=true
+addLibs2Classpath=false
 baseDaoClass=celemari.tms.hbn.BaseHibernateDAO

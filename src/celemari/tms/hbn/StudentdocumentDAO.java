@@ -49,7 +49,7 @@ public class StudentdocumentDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Studentdocument findById(celemari.tms.hbn.StudentdocumentId id) {
+	public Studentdocument findById(java.lang.Integer id) {
 		log.debug("getting Studentdocument instance with id: " + id);
 		try {
 			Studentdocument instance = (Studentdocument) getSession().get(

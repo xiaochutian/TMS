@@ -29,7 +29,7 @@ public interface UserManager{
      * @param info 用户信息
      * @return 用户对象
      */
-    UserBean register(int id,String name, String password, int role, String email, String phone);
+    UserBean register(String idNumber,String name, String password, int role, String email, String phone);
 
     /**
      * 以用户名和密码登录
@@ -39,7 +39,7 @@ public interface UserManager{
      * @param role 用户身份
      * @return 用户对象
      */
-    UserBean login(int id, String password, int role);
+    UserBean login(String id, String password, int role);
 
     /**
      * 更新用户信息

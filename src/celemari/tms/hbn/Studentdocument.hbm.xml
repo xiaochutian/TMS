@@ -6,13 +6,13 @@
 -->
 <hibernate-mapping>
     <class name="celemari.tms.hbn.Studentdocument" table="studentdocument" catalog="tms">
-        <composite-id name="id" class="celemari.tms.hbn.StudentdocumentId">
-            <key-many-to-one name="training" class="celemari.tms.hbn.Training">
-                <column name="training_student_studentNumber" />
-                <column name="training_job_company_idcompany" />
-                <column name="training_job_teacher_idteacher" />
-            </key-many-to-one>
-        </composite-id>
+        <id name="idstudentdocument" type="java.lang.Integer">
+            <column name="idstudentdocument" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="training" class="celemari.tms.hbn.Training" fetch="select">
+            <column name="training_idtraining" not-null="true" />
+        </many-to-one>
         <property name="name" type="java.lang.String">
             <column name="name" length="45" />
         </property>
@@ -22,9 +22,7 @@
             </column>
         </property>
         <property name="type" type="java.lang.Short">
-            <column name="type">
-                <comment>1±íÊ¾ÉêÇë£¬2±íÊ¾ÖÜ±¨£¬3±íÊ¾×Ü½á¡£</comment>
-            </column>
+            <column name="type" />
         </property>
     </class>
 </hibernate-mapping>

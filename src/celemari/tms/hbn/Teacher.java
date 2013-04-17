@@ -12,6 +12,7 @@ public class Teacher implements java.io.Serializable {
 	// Fields
 
 	private Integer idteacher;
+	private String teacherNumber;
 	private String name;
 	private String password;
 	private String email;
@@ -25,19 +26,18 @@ public class Teacher implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Teacher(Integer idteacher, String name, String password, String email) {
-		this.idteacher = idteacher;
+	public Teacher(String teacherNumber, String name, String password,
+			String email) {
+		this.teacherNumber = teacherNumber;
 		this.name = name;
 		this.password = password;
 		this.email = email;
 	}
-	
-	
-	/** my constructor*/
-	public Teacher(Integer idteacher, String name, String password,
+
+	public Teacher(String teacherNumber, String name, String password,
 			String email, String phoneNumber) {
 		super();
-		this.idteacher = idteacher;
+		this.teacherNumber = teacherNumber;
 		this.name = name;
 		this.password = password;
 		this.email = email;
@@ -45,9 +45,9 @@ public class Teacher implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Teacher(Integer idteacher, String name, String password,
+	public Teacher(String teacherNumber, String name, String password,
 			String email, String phoneNumber, Set jobs) {
-		this.idteacher = idteacher;
+		this.teacherNumber = teacherNumber;
 		this.name = name;
 		this.password = password;
 		this.email = email;
@@ -63,6 +63,14 @@ public class Teacher implements java.io.Serializable {
 
 	public void setIdteacher(Integer idteacher) {
 		this.idteacher = idteacher;
+	}
+
+	public String getTeacherNumber() {
+		return this.teacherNumber;
+	}
+
+	public void setTeacherNumber(String teacherNumber) {
+		this.teacherNumber = teacherNumber;
 	}
 
 	public String getName() {
