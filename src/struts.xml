@@ -73,8 +73,8 @@
         </action>
         
         <action name="Login" class="celemari.tms.struts.action.LoginAction">
-            <result name="success">/job.jsp</result>
-            <result name="fail">/login.jsp</result>
+            <result name="success">/index.jsp</result>
+            <result name="fail">/index.jsp</result>
         </action>
         
         <action name="PublishJob" class="celemari.tms.struts.action.PublishJobAction">
@@ -83,8 +83,8 @@
         </action>
           
         <action name="Register" class="celemari.tms.struts.action.RegisterAction">
-            <result name="success">/job.jsp</result>
-            <result name="fail">/login.jsp</result>
+            <result name="success">/index.jsp</result>
+            <result name="fail">/index.jsp</result>
         </action>        
        
         <action name="RemoveJob" class="celemari.tms.struts.action.RemoveJobAction">

@@ -24,7 +24,7 @@ public class RegisterAction {
 	public String execute() throws Exception {
             
             Map session = (Map)ActionContext.getContext().get(ActionContext.SESSION);
-            retuser = um.register(user.getId(),user.getUsername(), user.getPassword(),user.getRole(), user.getEmail(), user.getPhone());
+            retuser = um.register(user.getIdNumber(),user.getUsername(), user.getPassword(),user.getRole(), user.getEmail(), user.getPhone());
             if ( retuser != null ){
                 session.put("user", retuser);
                 return "success";
