@@ -8,8 +8,9 @@ public class TrainingId implements java.io.Serializable {
 
 	// Fields
 
-	private Student student;
-	private Job job;
+	private Integer studentStudentNumber;
+	private Integer jobCompanyIdcompany;
+	private Integer jobTeacherIdteacher;
 
 	// Constructors
 
@@ -18,27 +19,37 @@ public class TrainingId implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public TrainingId(Student student, Job job) {
-		this.student = student;
-		this.job = job;
+	public TrainingId(Integer studentStudentNumber,
+			Integer jobCompanyIdcompany, Integer jobTeacherIdteacher) {
+		this.studentStudentNumber = studentStudentNumber;
+		this.jobCompanyIdcompany = jobCompanyIdcompany;
+		this.jobTeacherIdteacher = jobTeacherIdteacher;
 	}
 
 	// Property accessors
 
-	public Student getStudent() {
-		return this.student;
+	public Integer getStudentStudentNumber() {
+		return this.studentStudentNumber;
 	}
 
-	public void setStudent(Student student) {
-		this.student = student;
+	public void setStudentStudentNumber(Integer studentStudentNumber) {
+		this.studentStudentNumber = studentStudentNumber;
 	}
 
-	public Job getJob() {
-		return this.job;
+	public Integer getJobCompanyIdcompany() {
+		return this.jobCompanyIdcompany;
 	}
 
-	public void setJob(Job job) {
-		this.job = job;
+	public void setJobCompanyIdcompany(Integer jobCompanyIdcompany) {
+		this.jobCompanyIdcompany = jobCompanyIdcompany;
+	}
+
+	public Integer getJobTeacherIdteacher() {
+		return this.jobTeacherIdteacher;
+	}
+
+	public void setJobTeacherIdteacher(Integer jobTeacherIdteacher) {
+		this.jobTeacherIdteacher = jobTeacherIdteacher;
 	}
 
 	public boolean equals(Object other) {
@@ -50,21 +61,40 @@ public class TrainingId implements java.io.Serializable {
 			return false;
 		TrainingId castOther = (TrainingId) other;
 
-		return ((this.getStudent() == castOther.getStudent()) || (this
-				.getStudent() != null && castOther.getStudent() != null && this
-				.getStudent().equals(castOther.getStudent())))
-				&& ((this.getJob() == castOther.getJob()) || (this.getJob() != null
-						&& castOther.getJob() != null && this.getJob().equals(
-						castOther.getJob())));
+		return ((this.getStudentStudentNumber() == castOther
+				.getStudentStudentNumber()) || (this.getStudentStudentNumber() != null
+				&& castOther.getStudentStudentNumber() != null && this
+				.getStudentStudentNumber().equals(
+						castOther.getStudentStudentNumber())))
+				&& ((this.getJobCompanyIdcompany() == castOther
+						.getJobCompanyIdcompany()) || (this
+						.getJobCompanyIdcompany() != null
+						&& castOther.getJobCompanyIdcompany() != null && this
+						.getJobCompanyIdcompany().equals(
+								castOther.getJobCompanyIdcompany())))
+				&& ((this.getJobTeacherIdteacher() == castOther
+						.getJobTeacherIdteacher()) || (this
+						.getJobTeacherIdteacher() != null
+						&& castOther.getJobTeacherIdteacher() != null && this
+						.getJobTeacherIdteacher().equals(
+								castOther.getJobTeacherIdteacher())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37 * result
-				+ (getStudent() == null ? 0 : this.getStudent().hashCode());
-		result = 37 * result
-				+ (getJob() == null ? 0 : this.getJob().hashCode());
+		result = 37
+				* result
+				+ (getStudentStudentNumber() == null ? 0 : this
+						.getStudentStudentNumber().hashCode());
+		result = 37
+				* result
+				+ (getJobCompanyIdcompany() == null ? 0 : this
+						.getJobCompanyIdcompany().hashCode());
+		result = 37
+				* result
+				+ (getJobTeacherIdteacher() == null ? 0 : this
+						.getJobTeacherIdteacher().hashCode());
 		return result;
 	}
 

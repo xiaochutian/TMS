@@ -9,6 +9,8 @@ public class Training implements java.io.Serializable {
 	// Fields
 
 	private TrainingId id;
+	private Student student;
+	private Job job;
 	private Integer grade;
 	private String applicationAddress;
 	private Short state;
@@ -21,16 +23,22 @@ public class Training implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Training(TrainingId id, String applicationAddress, Short state) {
+	public Training(TrainingId id, Student student, Job job,
+			String applicationAddress, Short state) {
 		this.id = id;
+		this.student = student;
+		this.job = job;
 		this.applicationAddress = applicationAddress;
 		this.state = state;
 	}
 
 	/** full constructor */
-	public Training(TrainingId id, Integer grade, String applicationAddress,
-			Short state, Studentdocument studentdocument) {
+	public Training(TrainingId id, Student student, Job job, Integer grade,
+			String applicationAddress, Short state,
+			Studentdocument studentdocument) {
 		this.id = id;
+		this.student = student;
+		this.job = job;
 		this.grade = grade;
 		this.applicationAddress = applicationAddress;
 		this.state = state;
@@ -45,6 +53,22 @@ public class Training implements java.io.Serializable {
 
 	public void setId(TrainingId id) {
 		this.id = id;
+	}
+
+	public Student getStudent() {
+		return this.student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public Job getJob() {
+		return this.job;
+	}
+
+	public void setJob(Job job) {
+		this.job = job;
 	}
 
 	public Integer getGrade() {

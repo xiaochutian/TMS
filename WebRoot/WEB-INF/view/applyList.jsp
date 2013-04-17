@@ -3,7 +3,10 @@
 <%@include file="/WEB-INF/jspf/head.jspf"%>
 <div id="mainContent">
     <c:forEach var="train" items="${trains}">
-
+        <%-- TODO: 补完参数 --%>
+        <%--<p>${train}</p>--%>
+        <a href="${rootPath}/Accept?" class="boxButton">接受</a>
+        <a href="${rootPath}/Reject?" class="boxButton">拒绝</a>
     </c:forEach>
 </div>
 <%@include file="/WEB-INF/jspf/foot.jspf"%>
