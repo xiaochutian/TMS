@@ -6,31 +6,52 @@
         var regForm = document.getElementById("regForm");
         var regUsername = document.getElementById("regUsername");
         var regPassword = document.getElementById("regPassword");
-        if (regUsername.value && regPassword.value){
+        var regEmail = document.getElementById("regEmail");
+        var regPhone = document.getElementById("regPhone");
+        if (regUsername.value && regPassword.value && regEmail.value && regPhone.value){
             if (regPassword.value.length >= 4){
-                //alert("可以注册");
+                //alert("role:" + role);
                 regForm.submit();
             }else{
                 alert("密码长度必须大于4");
             }
         }else{
-            alert("用户名和密码不能为空");
+            alert("所有字段都必须填上！");
         }
     }
 </script>
 <div id="mainContent">
     <center>
-        <s:form action="Register" id="regForm">
+        <form action="Register" id="regForm">
             <table>
                 <tr>
-                    <td><s:textfield name="user.username" label="用户名" id="regUsername"/></td>
+                    <td>用户名</td>
+                    <td><input type="text" name="user.username" id="regUsername"/></td>
                 </tr>
                 <tr>
-                    <td><s:password name="user.password" label="密码" id="regPassword"/></td>
+                    <td>密码</td>
+                    <td><input type="password" name="user.password" id="regPassword"/></td>
+                </tr>
+                <tr>
+                    <td>邮箱</td>
+                    <td><input type="text" name="user.email" id="regEmail"/></td>
+                </tr>
+                <tr>
+                    <td>电话</td>
+                    <td><input type="text" name="user.phone" id="regPhone"/></td>
+                </tr>
+                <tr>
+                    <td>身份</td>
+                    <td>
+                        <input id="undergraduateCheck" type="radio" checked="true" name="role" value="0">本科生
+                        <input id="graduateCheck" type="radio" name="role" value="1">研究生
+                        <input id="techerCheck" type="radio" name="role" value="2">教师
+                    </td>
                 </tr>
             </table>
             <a href="#" class="boxButton" onclick="register()">注册</a>
-        </s:form>
+            <hidden name="user.role"/>
+        </form>
     </center>
 </div>
 <%@include file="WEB-INF/jspf/foot.jspf"%>
