@@ -1,8 +1,10 @@
 package celemari.tms;
 
+import java.util.List;
+
+import celemari.tms.hbn.Studentdocument;
 import celemari.tms.vo.StudentDocumentBean;
 import celemari.tms.vo.TrainBean;
-import java.util.List;
 
 public interface TrainingManager{
 
@@ -20,7 +22,7 @@ public interface TrainingManager{
      * @param trainBean 要检索的实训
      * @return 与该实训关联的报告的列表
      */
-    List<StudentDocumentBean> getReports(TrainBean trainBean);
+    List<Studentdocument> getReports(TrainBean trainBean);
 
     /**
      * 为指定的实训评分

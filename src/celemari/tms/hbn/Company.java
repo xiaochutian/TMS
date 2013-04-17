@@ -29,19 +29,17 @@ public class Company implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Company(Integer idcompany, String name, String brief, String address) {
-		this.idcompany = idcompany;
+	public Company(String name, String brief, String address) {
 		this.name = name;
 		this.brief = brief;
 		this.address = address;
 	}
 
 	/** full constructor */
-	public Company(Integer idcompany, String name, String brief,
-			String address, String applicationTemplateAddress,
+	public Company(String name, String brief, String address,
+			String applicationTemplateAddress,
 			String internshipCertificateAddress, String linkman,
 			String mansPhoneNumber, String mansEmailAddress, Set jobs) {
-		this.idcompany = idcompany;
 		this.name = name;
 		this.brief = brief;
 		this.address = address;
