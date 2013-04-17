@@ -12,6 +12,8 @@ public class Job implements java.io.Serializable {
 	// Fields
 
 	private JobId id;
+	private Teacher teacher;
+	private Company company;
 	private String name;
 	private String brief;
 	private Integer studentMax;
@@ -25,9 +27,11 @@ public class Job implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Job(JobId id, String name, String brief, Integer studentMax,
-			Integer studentPresent) {
+	public Job(JobId id, Teacher teacher, Company company, String name,
+			String brief, Integer studentMax, Integer studentPresent) {
 		this.id = id;
+		this.teacher = teacher;
+		this.company = company;
 		this.name = name;
 		this.brief = brief;
 		this.studentMax = studentMax;
@@ -35,9 +39,12 @@ public class Job implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Job(JobId id, String name, String brief, Integer studentMax,
-			Integer studentPresent, Set trainings) {
+	public Job(JobId id, Teacher teacher, Company company, String name,
+			String brief, Integer studentMax, Integer studentPresent,
+			Set trainings) {
 		this.id = id;
+		this.teacher = teacher;
+		this.company = company;
 		this.name = name;
 		this.brief = brief;
 		this.studentMax = studentMax;
@@ -53,6 +60,22 @@ public class Job implements java.io.Serializable {
 
 	public void setId(JobId id) {
 		this.id = id;
+	}
+
+	public Teacher getTeacher() {
+		return this.teacher;
+	}
+
+	public void setTeacher(Teacher teacher) {
+		this.teacher = teacher;
+	}
+
+	public Company getCompany() {
+		return this.company;
+	}
+
+	public void setCompany(Company company) {
+		this.company = company;
 	}
 
 	public String getName() {

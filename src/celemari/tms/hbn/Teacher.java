@@ -7,11 +7,13 @@ import java.util.Set;
  * Teacher entity. @author MyEclipse Persistence Tools
  */
 
-public class Teacher extends celemari.tms.hbn.User implements java.io.Serializable {
+public class Teacher implements java.io.Serializable {
 
 	// Fields
 
 	private Integer idteacher;
+	private String name;
+	private String password;
 	private String email;
 	private String phoneNumber;
 	private Set jobs = new HashSet(0);
@@ -23,32 +25,34 @@ public class Teacher extends celemari.tms.hbn.User implements java.io.Serializab
 	}
 
 	/** minimal constructor */
-	public Teacher(Integer idteacher, String email) {
+	public Teacher(Integer idteacher, String name, String password, String email) {
 		this.idteacher = idteacher;
+		this.name = name;
+		this.password = password;
 		this.email = email;
 	}
 	
 	
 	/** my constructor*/
-	public Teacher(Integer idteacher, String name,String password,
+	public Teacher(Integer idteacher, String name, String password,
 			String email, String phoneNumber) {
 		super();
 		this.idteacher = idteacher;
+		this.name = name;
+		this.password = password;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
-		this.setName(name);
-		this.setPassword(password);
 	}
 
 	/** full constructor */
-	public Teacher(Integer idteacher, String name,String password,
+	public Teacher(Integer idteacher, String name, String password,
 			String email, String phoneNumber, Set jobs) {
 		this.idteacher = idteacher;
+		this.name = name;
+		this.password = password;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.jobs = jobs;
-		this.setName(name);
-		this.setPassword(password);
 	}
 
 	// Property accessors
@@ -61,7 +65,21 @@ public class Teacher extends celemari.tms.hbn.User implements java.io.Serializab
 		this.idteacher = idteacher;
 	}
 
+	public String getName() {
+		return this.name;
+	}
 
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public String getEmail() {
 		return this.email;

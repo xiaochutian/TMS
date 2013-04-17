@@ -7,11 +7,13 @@ import java.util.Set;
  * Student entity. @author MyEclipse Persistence Tools
  */
 
-public class Student extends celemari.tms.hbn.User implements java.io.Serializable {
+public class Student implements java.io.Serializable {
 
 	// Fields
 
 	private Integer studentNumber;
+	private String name;
+	private String password;
 	private String email;
 	private String phoneNumber;
 	private Short type;
@@ -24,39 +26,40 @@ public class Student extends celemari.tms.hbn.User implements java.io.Serializab
 	}
 
 	/** minimal constructor */
-	public Student(Integer studentNumber,String name, String password,
+	public Student(Integer studentNumber, String name, String password,
 			String email, Short type) {
 		this.studentNumber = studentNumber;
+		this.name = name;
+		this.password = password;
 		this.email = email;
 		this.type = type;
-		this.setName(name);
-		this.setPassword(password);
 	}
 	
-	
-	/** my constructor*/
-	public Student(Integer studentNumber,String name, String password,
+	/**my constructor*/
+	public Student(Integer studentNumber, String name, String password,
 			String email, String phoneNumber, Short type) {
 		super();
 		this.studentNumber = studentNumber;
+		this.name = name;
+		this.password = password;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.type = type;
-		this.setName(name);
-		this.setPassword(password);
 	}
 
 	/** full constructor */
-	public Student(Integer studentNumber,String name, String password,
+	public Student(Integer studentNumber, String name, String password,
 			String email, String phoneNumber, Short type, Set trainings) {
 		this.studentNumber = studentNumber;
+		this.name = name;
+		this.password = password;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.type = type;
 		this.trainings = trainings;
-		this.setName(name);
-		this.setPassword(password);
 	}
+
+	
 
 	// Property accessors
 
@@ -68,6 +71,21 @@ public class Student extends celemari.tms.hbn.User implements java.io.Serializab
 		this.studentNumber = studentNumber;
 	}
 
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public String getEmail() {
 		return this.email;
