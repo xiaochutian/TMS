@@ -9,11 +9,59 @@
     <constant name="struts.devMode" value="true" />
 
     <package name="struts2" namespace="/" extends="struts-default">
+        
+        <action name="AddReport" class="celemari.tms.struts.action.AddReportAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        
+        <action name="ApplyJob" class="celemari.tms.struts.action.ApplyJobAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        
+        <action name="CheckTrain" class="celemari.tms.struts.action.CheckTrainAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        
+        <action name="GetReports" class="celemari.tms.struts.action.GetReportsAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        
+        <action name="GradeTrain" class="celemari.tms.struts.action.GradeTrainAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+        
         <action name="Login" class="celemari.tms.struts.action.LoginAction">
             <result name="success">/job.jsp</result>
             <result name="fail">/login.jsp</result>
         </action>
+        
+        <action name="PublishJob" class="celemari.tms.struts.action.PublishJobAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+          
+        <action name="Register" class="celemari.tms.struts.action.RegisterAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>        
+       
+        <action name="RemoveJob" class="celemari.tms.struts.action.RemoveJobAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>
+         
+        <action name="Update" class="celemari.tms.struts.action.UpdateAction">
+            <result name="success">/job.jsp</result>
+            <result name="fail">/login.jsp</result>
+        </action>  
+        
     </package>
+    
 
     <!-- Add packages here -->
 

@@ -5,6 +5,7 @@
 package celemari.tms.struts.action;
 
 import celemari.tms.UserManager;
+import celemari.tms.impl.UserManagerImpl;
 import celemari.tms.vo.UserBean;
 import com.opensymphony.xwork2.ActionContext;
 import java.util.Map;
@@ -16,7 +17,7 @@ import java.util.Map;
 public class RegisterAction {
     
 	private UserBean user, retuser;
-        private UserManager um;
+        private UserManager um = new UserManagerImpl();
 	
 	private static final long serialVersionUID = 1l;
 	
