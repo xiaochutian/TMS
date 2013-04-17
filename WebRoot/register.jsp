@@ -43,14 +43,13 @@
                 <tr>
                     <td>身份</td>
                     <td>
-                        <input id="undergraduateCheck" type="radio" checked="true" name="role" value="0">本科生
-                        <input id="graduateCheck" type="radio" name="role" value="1">研究生
-                        <input id="techerCheck" type="radio" name="role" value="2">教师
+                        <input id="undergraduateCheck" type="radio" checked="true" name="user.role" value="0">本科生
+                        <input id="graduateCheck" type="radio" name="user.role" value="1">研究生
+                        <input id="techerCheck" type="radio" name="user.role" value="2">教师
                     </td>
                 </tr>
             </table>
             <a href="#" class="boxButton" onclick="register()">注册</a>
-            <hidden name="user.role"/>
         </form>
     </center>
 </div>

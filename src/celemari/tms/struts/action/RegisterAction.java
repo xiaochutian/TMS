@@ -22,9 +22,10 @@ public class RegisterAction {
 	private static final long serialVersionUID = 1l;
 	
 	public String execute() throws Exception {
-            
             Map session = (Map)ActionContext.getContext().get(ActionContext.SESSION);
-            retuser = um.register(user.getIdNumber(),user.getUsername(), user.getPassword(),user.getRole(), user.getEmail(), user.getPhone());
+            retuser = um.register("111111",user.getUsername(), user.getPassword(),user.getRole(), user.getEmail(), user.getPhone());
+            return "success";
+            /*
             if ( retuser != null ){
                 session.put("user", retuser);
                 return "success";
@@ -32,8 +33,8 @@ public class RegisterAction {
                 
             else{
                 return "fail";
-            }
-		
+            }*/
+                
 	}
 	
 	public UserBean getUser(){
