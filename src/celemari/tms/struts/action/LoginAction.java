@@ -4,6 +4,7 @@
  */
 package celemari.tms.struts.action;
 
+import celemari.tms.TrainingManager;
 import celemari.tms.UserManager;
 import celemari.tms.impl.UserManagerImpl;
 import celemari.tms.vo.UserBean;

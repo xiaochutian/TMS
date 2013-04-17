@@ -8,6 +8,8 @@
     list.add(new Object());
     list.add(new Object());
     session.setAttribute("jobs", list);
+
+    download jobs
 %>
 --%>
 <div id="mainContent">
