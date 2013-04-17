@@ -3,12 +3,13 @@
 <%@include file="WEB-INF/jspf/head.jspf"%>
 <script>
     function register(){
+        var regIdNumber = document.getElementById("regIdNumber");
         var regForm = document.getElementById("regForm");
         var regUsername = document.getElementById("regUsername");
         var regPassword = document.getElementById("regPassword");
         var regEmail = document.getElementById("regEmail");
         var regPhone = document.getElementById("regPhone");
-        if (regUsername.value && regPassword.value && regEmail.value && regPhone.value){
+        if (regIdNumber.value && regUsername.value && regPassword.value && regEmail.value && regPhone.value){
             if (regPassword.value.length >= 4){
                 //alert("role:" + role);
                 regForm.submit();
@@ -24,6 +25,10 @@
     <center>
         <form action="Register" id="regForm">
             <table>
+                <tr>
+                    <td>ID</td>
+                    <td><input type="text" name="user.idNumber" id="regIdNumber"></td>
+                </tr>
                 <tr>
                     <td>用户名</td>
                     <td><input type="text" name="user.username" id="regUsername"/></td>
@@ -43,14 +48,13 @@
                 <tr>
                     <td>身份</td>
                     <td>
-                        <input id="undergraduateCheck" type="radio" checked="true" name="role" value="0">本科生
-                        <input id="graduateCheck" type="radio" name="role" value="1">研究生
-                        <input id="techerCheck" type="radio" name="role" value="2">教师
+                        <input id="undergraduateCheck" type="radio" checked="true" name="user.role" value="0">本科生
+                        <input id="graduateCheck" type="radio" name="user.role" value="1">研究生
+                        <input id="techerCheck" type="radio" name="user.role" value="2">教师
                     </td>
                 </tr>
             </table>
             <a href="#" class="boxButton" onclick="register()">注册</a>
-            <hidden name="user.role"/>
         </form>
     </center>
 </div>
