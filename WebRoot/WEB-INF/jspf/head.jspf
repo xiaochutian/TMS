@@ -1,6 +1,5 @@
 <%@page pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <%pageContext.setAttribute("rootPath", application.getContextPath());%>
 <html>
@@ -30,10 +29,10 @@
         <div id="userBar">
             <c:choose>
                 <c:when test="${empty user}">
-                    <s:form id="userForm" action="Login" method="POST">
-                        <s:textfield label="用户名" id="usernameText"type="text" name="user.username"/>
-                        <s:password label="密码" id="passwordText" type="password" name="user.passwrod"/>
-                    </s:form>
+                    <form id="userForm" action="Login" method="POST">
+                        用户名<input id="usernameText" type="text" name="user.username">
+                        密码<input id="passwordText" type="password" name="user.passwrod">
+                    </form>
                     <a href="#" onclick="login()">登录</a> | <a href="${rootPath}/register.jsp">注册</a>
                 </c:when>
                 <c:otherwise>
