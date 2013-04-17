@@ -4,6 +4,7 @@
  */
 package celemari.tms.struts.action;
 
+import celemari.tms.TrainingManager;
 import celemari.tms.UserManager;
 import celemari.tms.impl.UserManagerImpl;
 import celemari.tms.vo.UserBean;
@@ -24,7 +25,7 @@ public class LoginAction {
 	public String execute() throws Exception {
             
             Map session = (Map)ActionContext.getContext().get(ActionContext.SESSION);
-            retuser = um.login(user.getId(), user.getPassword(),user.getRole());
+            retuser = um.login(user.getIdNumber(), user.getPassword(),user.getRole());
             if ( retuser != null ){
                 session.put("user", retuser);
                 return "success";

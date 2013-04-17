@@ -13,8 +13,11 @@
 </script>
 <div id="mainContent">
     <%--TODO: 补完参数--%>
+    <%--
+        download trains
+    --%>
     <%--${studentDocument}--%>
-    <s:form id="gradeForm" action="Grade" method="POST">
+    <s:form id="gradeForm" action="GradeTrain" method="POST">
         <s:textfield id="gradeText" name=""/>
         <a href="#" onclick="submit()">评分</a>
     </s:form>

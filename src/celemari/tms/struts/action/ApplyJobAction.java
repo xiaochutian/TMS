@@ -20,6 +20,7 @@ public class ApplyJobAction {
     private UserBean user;
     private JobBean job;
     private TrainBean train;
+    private String appAddress;
     private JobManager jm = new JobManagerImpl();
     
     private static final long serialVersionUID = 1l;
@@ -27,9 +28,9 @@ public class ApplyJobAction {
     public String execute() throws Exception {
             
         Map session = (Map)ActionContext.getContext().get(ActionContext.SESSION);
-        setTrain(jm.applyJob(getUser(), getJob()));
-        session.put("train", getTrain());
-
+        setTrain(jm.applyJob(getUser(), getJob(), appAddress));
+        session.put("user.train", getTrain());
+        
 	return "success";	
     }    
 
@@ -73,6 +74,20 @@ public class ApplyJobAction {
      */
     public void setTrain(TrainBean train) {
         this.train = train;
+    }
+
+    /**
+     * @return the appAddress
+     */
+    public String getAppAddress() {
+        return appAddress;
+    }
+
+    /**
+     * @param appAddress the appAddress to set
+     */
+    public void setAppAddress(String appAddress) {
+        this.appAddress = appAddress;
     }
     
     

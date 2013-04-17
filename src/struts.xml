@@ -10,6 +10,43 @@
 
     <package name="struts2" namespace="/" extends="struts-default">
         
+        <action name="ApplyList" class="celemari.tms.struts.action.ApplyListAction">
+            <result name="success">/applyList.jsp</result>
+        </action>
+        
+        <action name="Grade" class="celemari.tms.struts.action.GradeAction">
+            <result name="success">/grade.jsp</result>
+        </action>
+        
+        <action name="JobList" class="celemari.tms.struts.action.JobListAction">
+            <result name="success">/jobList.jsp</result>
+        </action> 
+        
+        <action name="JobStudent" class="celemari.tms.struts.action.JobStudentAction">
+            <result name="success">/jobStudent.jsp</result>
+        </action>      
+        
+        <action name="JobTeacher" class="celemari.tms.struts.action.JobTeacherAction">
+            <result name="success">/jobTeacher.jsp</result>
+        </action>    
+        
+        <action name="StudentDocList" class="celemari.tms.struts.action.StudentDocListAction">
+            <result name="success">/studentDocList.jsp</result>
+        </action>
+        
+        <action name="StudentDocument" class="celemari.tms.struts.action.StudentDocumentAction">
+            <result name="success">/studentDocument.jsp</result>
+        </action>                         
+        
+        <action name="User" class="celemari.tms.struts.action.UserAction">
+            <result name="success">/user.jsp</result>
+        </action> 
+        
+        
+        
+        
+        
+        
         <action name="AddReport" class="celemari.tms.struts.action.AddReportAction">
             <result name="success">/job.jsp</result>
             <result name="fail">/login.jsp</result>
@@ -36,8 +73,8 @@
         </action>
         
         <action name="Login" class="celemari.tms.struts.action.LoginAction">
-            <result name="success">/job.jsp</result>
-            <result name="fail">/login.jsp</result>
+            <result name="success">/index.jsp</result>
+            <result name="fail">/index.jsp</result>
         </action>
         
         <action name="PublishJob" class="celemari.tms.struts.action.PublishJobAction">
@@ -46,8 +83,8 @@
         </action>
           
         <action name="Register" class="celemari.tms.struts.action.RegisterAction">
-            <result name="success">/job.jsp</result>
-            <result name="fail">/login.jsp</result>
+            <result name="success">/index.jsp</result>
+            <result name="fail">/index.jsp</result>
         </action>        
        
         <action name="RemoveJob" class="celemari.tms.struts.action.RemoveJobAction">
