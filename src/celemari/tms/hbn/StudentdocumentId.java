@@ -8,9 +8,8 @@ public class StudentdocumentId implements java.io.Serializable {
 
 	// Fields
 
-	private Integer trainingStudentStudentNumber;
-	private Integer trainingJobCompanyIdcompany;
-	private Integer trainingJobTeacherIdteacher;
+	private Integer idstudentdocument;
+	private Training training;
 
 	// Constructors
 
@@ -19,41 +18,27 @@ public class StudentdocumentId implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public StudentdocumentId(Integer trainingStudentStudentNumber,
-			Integer trainingJobCompanyIdcompany,
-			Integer trainingJobTeacherIdteacher) {
-		this.trainingStudentStudentNumber = trainingStudentStudentNumber;
-		this.trainingJobCompanyIdcompany = trainingJobCompanyIdcompany;
-		this.trainingJobTeacherIdteacher = trainingJobTeacherIdteacher;
+	public StudentdocumentId(Integer idstudentdocument, Training training) {
+		this.idstudentdocument = idstudentdocument;
+		this.training = training;
 	}
 
 	// Property accessors
 
-	public Integer getTrainingStudentStudentNumber() {
-		return this.trainingStudentStudentNumber;
+	public Integer getIdstudentdocument() {
+		return this.idstudentdocument;
 	}
 
-	public void setTrainingStudentStudentNumber(
-			Integer trainingStudentStudentNumber) {
-		this.trainingStudentStudentNumber = trainingStudentStudentNumber;
+	public void setIdstudentdocument(Integer idstudentdocument) {
+		this.idstudentdocument = idstudentdocument;
 	}
 
-	public Integer getTrainingJobCompanyIdcompany() {
-		return this.trainingJobCompanyIdcompany;
+	public Training getTraining() {
+		return this.training;
 	}
 
-	public void setTrainingJobCompanyIdcompany(
-			Integer trainingJobCompanyIdcompany) {
-		this.trainingJobCompanyIdcompany = trainingJobCompanyIdcompany;
-	}
-
-	public Integer getTrainingJobTeacherIdteacher() {
-		return this.trainingJobTeacherIdteacher;
-	}
-
-	public void setTrainingJobTeacherIdteacher(
-			Integer trainingJobTeacherIdteacher) {
-		this.trainingJobTeacherIdteacher = trainingJobTeacherIdteacher;
+	public void setTraining(Training training) {
+		this.training = training;
 	}
 
 	public boolean equals(Object other) {
@@ -65,24 +50,15 @@ public class StudentdocumentId implements java.io.Serializable {
 			return false;
 		StudentdocumentId castOther = (StudentdocumentId) other;
 
-		return ((this.getTrainingStudentStudentNumber() == castOther
-				.getTrainingStudentStudentNumber()) || (this
-				.getTrainingStudentStudentNumber() != null
-				&& castOther.getTrainingStudentStudentNumber() != null && this
-				.getTrainingStudentStudentNumber().equals(
-						castOther.getTrainingStudentStudentNumber())))
-				&& ((this.getTrainingJobCompanyIdcompany() == castOther
-						.getTrainingJobCompanyIdcompany()) || (this
-						.getTrainingJobCompanyIdcompany() != null
-						&& castOther.getTrainingJobCompanyIdcompany() != null && this
-						.getTrainingJobCompanyIdcompany().equals(
-								castOther.getTrainingJobCompanyIdcompany())))
-				&& ((this.getTrainingJobTeacherIdteacher() == castOther
-						.getTrainingJobTeacherIdteacher()) || (this
-						.getTrainingJobTeacherIdteacher() != null
-						&& castOther.getTrainingJobTeacherIdteacher() != null && this
-						.getTrainingJobTeacherIdteacher().equals(
-								castOther.getTrainingJobTeacherIdteacher())));
+		return ((this.getIdstudentdocument() == castOther
+				.getIdstudentdocument()) || (this.getIdstudentdocument() != null
+				&& castOther.getIdstudentdocument() != null && this
+				.getIdstudentdocument()
+				.equals(castOther.getIdstudentdocument())))
+				&& ((this.getTraining() == castOther.getTraining()) || (this
+						.getTraining() != null
+						&& castOther.getTraining() != null && this
+						.getTraining().equals(castOther.getTraining())));
 	}
 
 	public int hashCode() {
@@ -90,16 +66,10 @@ public class StudentdocumentId implements java.io.Serializable {
 
 		result = 37
 				* result
-				+ (getTrainingStudentStudentNumber() == null ? 0 : this
-						.getTrainingStudentStudentNumber().hashCode());
-		result = 37
-				* result
-				+ (getTrainingJobCompanyIdcompany() == null ? 0 : this
-						.getTrainingJobCompanyIdcompany().hashCode());
-		result = 37
-				* result
-				+ (getTrainingJobTeacherIdteacher() == null ? 0 : this
-						.getTrainingJobTeacherIdteacher().hashCode());
+				+ (getIdstudentdocument() == null ? 0 : this
+						.getIdstudentdocument().hashCode());
+		result = 37 * result
+				+ (getTraining() == null ? 0 : this.getTraining().hashCode());
 		return result;
 	}
 

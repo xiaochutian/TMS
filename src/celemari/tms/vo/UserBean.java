@@ -6,7 +6,7 @@ import java.util.List;
 public class UserBean implements Serializable{
 
     private boolean login = false;
-    private int id;
+    private String idNumber;
     private String username;
     private String password;
     private int role;
@@ -16,16 +16,32 @@ public class UserBean implements Serializable{
     public UserBean(){
     }
     
-    public UserBean(int id, String username, String password, int role,
-			String email, String phone) {
+   
+
+	public UserBean(String idNumber, String username, String password,
+			int role, String email, String phone) {
 		super();
-		this.id = id;
+		this.idNumber = idNumber;
 		this.username = username;
 		this.password = password;
 		this.role = role;
 		this.email = email;
 		this.phone = phone;
 	}
+
+
+
+	public String getIdNumber() {
+		return idNumber;
+	}
+
+
+
+	public void setIdNumber(String idNumber) {
+		this.idNumber = idNumber;
+	}
+
+
 
 	public boolean isLogin(){
         return login;
@@ -51,13 +67,7 @@ public class UserBean implements Serializable{
 		this.phone = phone;
 	}
 
-	public int getId(){
-        return id;
-    }
-
-    public void setId(int id){
-        this.id = id;
-    }
+	
 
     public String getUsername(){
         return username;

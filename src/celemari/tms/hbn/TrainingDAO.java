@@ -1,6 +1,7 @@
 package celemari.tms.hbn;
 
 import java.util.List;
+import java.util.Set;
 import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.criterion.Example;
@@ -49,7 +50,7 @@ public class TrainingDAO extends BaseHibernateDAO {
 		}
 	}
 
-	public Training findById(celemari.tms.hbn.TrainingId id) {
+	public Training findById(java.lang.Integer id) {
 		log.debug("getting Training instance with id: " + id);
 		try {
 			Training instance = (Training) getSession().get(

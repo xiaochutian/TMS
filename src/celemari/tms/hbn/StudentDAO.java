@@ -23,6 +23,7 @@ import org.slf4j.LoggerFactory;
 public class StudentDAO extends BaseHibernateDAO {
 	private static final Logger log = LoggerFactory.getLogger(StudentDAO.class);
 	// property constants
+	public static final String STUDENT_NUMBER = "studentNumber";
 	public static final String NAME = "name";
 	public static final String PASSWORD = "password";
 	public static final String EMAIL = "email";
@@ -91,6 +92,10 @@ public class StudentDAO extends BaseHibernateDAO {
 			log.error("find by property name failed", re);
 			throw re;
 		}
+	}
+
+	public List findByStudentNumber(Object studentNumber) {
+		return findByProperty(STUDENT_NUMBER, studentNumber);
 	}
 
 	public List findByName(Object name) {

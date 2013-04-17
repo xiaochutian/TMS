@@ -1,5 +1,8 @@
 package celemari.tms.hbn;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Training entity. @author MyEclipse Persistence Tools
  */
@@ -8,13 +11,13 @@ public class Training implements java.io.Serializable {
 
 	// Fields
 
-	private TrainingId id;
+	private Integer idtraining;
 	private Student student;
 	private Job job;
 	private Integer grade;
 	private String applicationAddress;
 	private Short state;
-	private Studentdocument studentdocument;
+	private Set studentdocuments = new HashSet(0);
 
 	// Constructors
 
@@ -23,9 +26,8 @@ public class Training implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Training(TrainingId id, Student student, Job job,
-			String applicationAddress, Short state) {
-		this.id = id;
+	public Training(Student student, Job job, String applicationAddress,
+			Short state) {
 		this.student = student;
 		this.job = job;
 		this.applicationAddress = applicationAddress;
@@ -33,26 +35,24 @@ public class Training implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Training(TrainingId id, Student student, Job job, Integer grade,
-			String applicationAddress, Short state,
-			Studentdocument studentdocument) {
-		this.id = id;
+	public Training(Student student, Job job, Integer grade,
+			String applicationAddress, Short state, Set studentdocuments) {
 		this.student = student;
 		this.job = job;
 		this.grade = grade;
 		this.applicationAddress = applicationAddress;
 		this.state = state;
-		this.studentdocument = studentdocument;
+		this.studentdocuments = studentdocuments;
 	}
 
 	// Property accessors
 
-	public TrainingId getId() {
-		return this.id;
+	public Integer getIdtraining() {
+		return this.idtraining;
 	}
 
-	public void setId(TrainingId id) {
-		this.id = id;
+	public void setIdtraining(Integer idtraining) {
+		this.idtraining = idtraining;
 	}
 
 	public Student getStudent() {
@@ -95,12 +95,12 @@ public class Training implements java.io.Serializable {
 		this.state = state;
 	}
 
-	public Studentdocument getStudentdocument() {
-		return this.studentdocument;
+	public Set getStudentdocuments() {
+		return this.studentdocuments;
 	}
 
-	public void setStudentdocument(Studentdocument studentdocument) {
-		this.studentdocument = studentdocument;
+	public void setStudentdocuments(Set studentdocuments) {
+		this.studentdocuments = studentdocuments;
 	}
 
 }

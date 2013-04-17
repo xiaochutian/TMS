@@ -6,14 +6,16 @@
 -->
 <hibernate-mapping>
     <class name="celemari.tms.hbn.Job" table="job" catalog="tms">
-        <composite-id name="id" class="celemari.tms.hbn.JobId">
-            <key-many-to-one name="company" class="celemari.tms.hbn.Company">
-                <column name="company_idcompany" />
-            </key-many-to-one>
-            <key-many-to-one name="teacher" class="celemari.tms.hbn.Teacher">
-                <column name="teacher_idteacher" />
-            </key-many-to-one>
-        </composite-id>
+        <id name="idjob" type="java.lang.Integer">
+            <column name="idjob" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="teacher" class="celemari.tms.hbn.Teacher" fetch="select">
+            <column name="teacher_idteacher" not-null="true" />
+        </many-to-one>
+        <many-to-one name="company" class="celemari.tms.hbn.Company" fetch="select">
+            <column name="company_idcompany" not-null="true" />
+        </many-to-one>
         <property name="name" type="java.lang.String">
             <column name="name" length="45" not-null="true" />
         </property>
@@ -28,8 +30,7 @@
         </property>
         <set name="trainings" inverse="true">
             <key>
-                <column name="job_company_idcompany" not-null="true" />
-                <column name="job_teacher_idteacher" not-null="true" />
+                <column name="job_idjob" not-null="true" />
             </key>
             <one-to-many class="celemari.tms.hbn.Training" />
         </set>
