@@ -18,7 +18,7 @@ public interface JobManager{
      * @param userBean 发布信息的用户
      * @param jobBean 要发布的实训招收信息
      */
-    void publishJob(UserBean userBean, JobBean jobBean);
+    void publishJob(JobBean jobBean);
 
     /**
      * 获得已发布的实训招收信息的数量
@@ -27,12 +27,6 @@ public interface JobManager{
      */
     int getCount();
 
-    /**
-     * 得到最近发布的一定数量的实训招收信息
-     *
-     * @return 最近发布的实训招收信息的列表
-     */
-    List<JobBean> getJobs();
 
     /**
      * 得到指定数量的实训招收信息
@@ -66,7 +60,7 @@ public interface JobManager{
      * @param jobBean 申请的工作
      * @return 记录了申请信息的实训记录
      */
-    TrainBean applyJob(UserBean userBean, JobBean jobBean);
+    TrainBean applyJob(UserBean userBean, JobBean jobBean, String appAddress);
 
     /**
      * 获得指定的招收中申请
