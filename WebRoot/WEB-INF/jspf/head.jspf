@@ -19,7 +19,7 @@
             }
         </script>
         <title>
-            实训管理系统
+            选课系统
             <c:if test="${!empty pageScope.title}">
                 - ${title}
             </c:if>
@@ -30,13 +30,13 @@
             <c:choose>
                 <c:when test="${empty user}">
                     <form id="userForm" action="Login" method="POST">
-                        用户名<input id="usernameText" type="text" name="user.username">
-                        密码<input id="passwordText" type="password" name="user.passwrod">
+                        用户名<input id="usernameText" type="text" name="user.idNumber">
+                        密码<input id="passwordText" type="password" name="user.password">
                     </form>
                     <a href="#" onclick="login()">登录</a> | <a href="${rootPath}/register.jsp">注册</a>
                 </c:when>
                 <c:otherwise>
-                    <b><a href="#">${user.username}</a></b> <a href="#">退出登录</a>
+                    <b><a href="#">${user.username}</a></b> <a href="logout.jsp">退出登录</a>
                 </c:otherwise>
             </c:choose>
         </div>
